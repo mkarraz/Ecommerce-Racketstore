@@ -1,7 +1,7 @@
 import React from "react";
-import { Nav, Navbar, NavDropdown, Container, NavLink } from 'react-bootstrap'
-import { IoCartOutline } from "react-icons/io5";
-import logo from '../img/logo.png'
+import { Nav, Navbar, NavDropdown, Container} from 'react-bootstrap'
+import logo from '../img/logo.png';
+import CartWidget from './CartWidget';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
@@ -33,7 +33,7 @@ const NavBar = () => {
                                 <NavDropdown.Item href="#action/3.4">Accessories</NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown.Divider/>
-                            <Nav.Link href="#store"><IoCartOutline/> Shopping Cart</Nav.Link>
+                            <Nav.Link href="#store"><CartWidget/></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </div>
