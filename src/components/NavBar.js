@@ -2,7 +2,6 @@ import React from "react";
 import { Nav, Navbar, NavDropdown, Container} from 'react-bootstrap'
 import logo from '../img/logo.png';
 import CartWidget from './CartWidget';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
     return (

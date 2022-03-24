@@ -1,0 +1,30 @@
+/* Reseteo gral */
+* {
+    margin: 0;
+    padding: 0; }
+
+.itemBtns{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.itemCountDetail{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.itemCountDetail button{
+    font-size: large;
+    font-weight: bold;
+}
+.itemCuantity{
+    width: 100%;
+    border: 0.5px solid #c7c7c7;
+    text-align: center;
+}
+.itemAddToCart button{
+    width: 100%;
+    margin-top: 5px;
+    font-weight: bold;
+}
