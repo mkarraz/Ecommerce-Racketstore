@@ -7,6 +7,7 @@ function App() {
 
     const greeting = "Encuentra todo lo que buscas relacionado al Tenis!"
     const userName = "Juan Carlos"
+    
     return (
       <>
         <NavBar />

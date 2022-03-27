@@ -1,11 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'mdb-react-ui-kit/dist/css/mdb.min.css'
-import './css/myStyles.css';
 import App from './App';
+import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import './css/myStyles.css';
+import './index.css';
+
 
 ReactDOM.render(
   <React.StrictMode>

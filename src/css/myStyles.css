@@ -2,9 +2,12 @@
 * {
     margin: 0;
     padding: 0; }
-
+/* CARD */
+.itemCard:hover{
+    transform: translatey(-10px) !important;
+}
 .itemBtns{
-    width: 25%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -14,17 +17,71 @@
     width: 100%;
     justify-content: space-between;
 }
-.itemCountDetail button{
+/* CARD TITLE */
+.titleCard {
+    color: black;
+}
+/* ITEM PRICE */
+.itemPrice{
+    color: #2fb12f;
+    font-weight: bold;
+}
+/* BOTON CANTIDAD */
+.qtyBtn{
     font-size: large;
     font-weight: bold;
+    background-color: #e6e6e6;
+    color: black;
+    border-radius: 50%;
+}
+.qtyBtn:focus{
+    font-size: large;
+    font-weight: bold;
+    background-color: #e6e6e6;
+    color: black;
+    border-radius: 50%;
+}
+.qtyBtn:hover{
+    background-color: #1aca1a;
+    color: white;
+}
+.qtyBtn:active{
+    color: #1aca1a;
+    background-color: white;
 }
 .itemCuantity{
-    width: 100%;
-    border: 0.5px solid #c7c7c7;
+    width: 5%px;
+    border: none;
     text-align: center;
+    color: black;
 }
-.itemAddToCart button{
+/* BOTON ADD TO CART */
+.addToCartBtn{
+    color: rgb(0, 0, 0);
+    background-color: #e6e6e6;
     width: 100%;
-    margin-top: 5px;
-    font-weight: bold;
+    margin-top: 8px;
+    font-weight: bolder;
+}
+.addToCartBtn:focus{
+    color: rgb(0, 0, 0);
+    background-color: #e6e6e6;
+    width: 100%;
+}
+.addToCartBtn:hover{
+    background-color: #1aca1a;
+    color: white;
+}
+.addToCartBtn:active{
+    color: #1aca1a;
+    background-color: white;
+    width: 100%;
+}
+/* Render de productos */
+.itemRender{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2%;
 }
