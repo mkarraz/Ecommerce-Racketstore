@@ -2,6 +2,44 @@
 * {
     margin: 0;
     padding: 0; }
+/* PRUEBAS */
+.prueba{
+    background-color: #1aca1a;
+}
+.prueba2{
+    background-color: blue;
+}
+/* Estilos Generales */
+.margTop{
+    margin-top: 15px;
+}
+.smallNote{
+    font-size: small;
+    color: rgb(156, 163, 156);
+}
+.greenColor{
+    color: #1aca1a;
+}
+.redColor{
+    color: red;
+}
+.boldStyle{
+    font-weight: bold;
+}
+.sidesBorder{
+    border-left: 0.5px solid rgb(207, 207, 207);
+    border-right: 0.5px solid rgb(207, 207, 207);
+}
+.fullBorder{
+    border: 0.5px solid rgb(207, 207, 207);
+}
+.centerAlign{
+    text-align: center;
+}
+.centerAlign1{
+    text-align: center;
+    margin-top: 10px;
+}
 /* CARD */
 .itemCard:hover{
     transform: translatey(-10px) !important;
@@ -32,7 +70,8 @@
     font-weight: bold;
     background-color: #e6e6e6;
     color: black;
-    border-radius: 50%;
+    height: 30px;
+    width: 5px;
 }
 .qtyBtn:focus{
     font-size: large;
@@ -49,31 +88,54 @@
     color: #1aca1a;
     background-color: white;
 }
-.itemCuantity{
-    width: 5%px;
+.itemQty{
     border: none;
     text-align: center;
     color: black;
+    font-weight: bold;
+    padding-top: 5px;
 }
-/* BOTON ADD TO CART */
-.addToCartBtn{
-    color: rgb(0, 0, 0);
-    background-color: #e6e6e6;
+/* BOTON VIEW DETAILS */
+
+.viewDetailsBtn{
+    color: white;
+    background-color: rgb(0, 0, 0);
     width: 100%;
     margin-top: 8px;
     font-weight: bolder;
 }
+.viewDetailsBtn:focus{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+.viewDetailsBtn:hover{
+    background-color: rgb(66, 65, 65);
+    color: white;
+}
+.viewDetailsBtn:active{
+    color: black;
+    background-color: white;
+    width: 100%;
+}
+/* BOTON ADD TO CART */
+.addToCartBtn{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    font-weight: bolder;
+}
 .addToCartBtn:focus{
-    color: rgb(0, 0, 0);
-    background-color: #e6e6e6;
+    color: white;
+    background-color: rgb(0, 0, 0);
     width: 100%;
 }
 .addToCartBtn:hover{
-    background-color: #1aca1a;
+    background-color: rgb(66, 65, 65);
     color: white;
 }
 .addToCartBtn:active{
-    color: #1aca1a;
+    color: black;
     background-color: white;
     width: 100%;
 }
@@ -84,4 +146,73 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 2%;
+}
+/* Render Item Detail */
+.divItemDet{
+    padding: 3%;
+}
+.ItemDetImg{
+    width: 100%;
+    background-color: blue;
+}
+.divItemDetImg{
+    border: 0.5px solid rgb(207, 207, 207);
+    height: 0.1vh;
+}
+.divItemDetCart{
+    background-color: red;
+}
+.ItemDetRow1{
+    padding-left: 25px;
+    padding-top: 35px;
+}
+.ItemDetRow2{
+    padding-left: 25px;
+    padding-top: 25px;
+}
+.gripDiv{
+    padding-top: 15px;
+    border-top: 0.5px solid rgb(207, 207, 207);
+}
+.itemDetTit{
+    font-size: 3.5vh;
+    font-weight: bold;
+}
+.actualPrice{
+    font-size: x-large;
+    margin-right: 8px;
+}
+.oldPrice{
+    font-size: medium;
+    color: red;
+    text-decoration: line-through;
+}
+.itemDiscount{
+    margin-top: 10px;
+}
+.gripDetailsDiv{
+    text-align: center;
+    border: 0.5px solid grey;
+}
+.ItemDetRow3{
+    padding-left: 25px;
+    margin-top: 15px;
+}
+.itemCountDiv{
+    padding-top: 15px;
+    margin-top: 10px;
+    border-top: 0.5px solid rgb(207, 207, 207);
+    border-bottom: 0.5px solid rgb(207, 207, 207);
+}
+
+.itemDescDiv{
+    padding-top: 15px;
+}
+.itemDetDesc1{
+    padding-top: 15px;
+    font-weight: bold;
+}
+.ItemDetRow4{
+    padding-left: 25px;
+    padding-top: 5px;
 }

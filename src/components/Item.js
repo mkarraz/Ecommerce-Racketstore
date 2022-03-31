@@ -1,13 +1,16 @@
 import React from "react"
 import Card from 'react-bootstrap/Card';
-import ItemCount from './ItemCount';
+import Button from 'react-bootstrap/Button'
+import ViewProductWidget from './ViewProductWidget';
+/* import ItemCount from "./itemCount"; */
+
+
 
 const Item = ({item}) => {
 
     return (
         <>
             <Card className="shadow itemCard" border="light" style={{ width: '18rem' }}>
-                {/* <Card.Img variant="top" src={item.img} /> */}
                 <img src={item.img} alt="" />
                 <Card.Body>
                     <Card.Title className="titleCard">{item.name}</Card.Title>
@@ -15,7 +18,9 @@ const Item = ({item}) => {
                         $ {item.price}
                     </Card.Text>
                     <div className="itemBtns">
-                        <ItemCount stock={item.stock} />
+                        <div className="itemAddToCart">
+                            <Button className="viewDetailsBtn" >View Details <ViewProductWidget/></Button>
+                        </div>
                     </div>
                 </Card.Body>
             </Card>

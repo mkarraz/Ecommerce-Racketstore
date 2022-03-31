@@ -1,6 +1,8 @@
 import React from "react"
 import { useState } from 'react'
 import Button from 'react-bootstrap/Button'
+import { Container, Row, Col} from 'react-bootstrap'
+
 
 const ItemCount = ({stock, onAdd}) => {
 
@@ -26,16 +28,22 @@ const ItemCount = ({stock, onAdd}) => {
 
     return (
         <>
-            <div className="itemCountDetail">
-                <Button className="qtyBtn" onClick={removeItem} size="sm">-</Button>
-                <div className="itemCuantity">
-                    <span style={{fontWeight: "bold"}}>{itemCounter}</span>
-                </div>
-                <Button className="qtyBtn" onClick={addItem} size="sm">+</Button>
-            </div>
-            <div className="itemAddToCart">
-                <Button className="addToCartBtn" onClick={handlerAddToCart} >Añadir al carrito</Button>
-            </div>
+            <Container>
+                <Row >
+                    <Col xs={6}>
+                        <Row>
+                            <div className='d-flex justify-content-evenly text-magenta'>
+                                <Button variant='outline-dark' onClick={removeItem}>-</Button>
+                                <div className="itemQty">{itemCounter}</div>
+                                <Button variant="outline-dark" onClick={addItem}>+</Button>
+                            </div>
+                        </Row>
+                    </Col>   
+                    <Col xs={6}>
+                        <Button className="addToCartBtn" onClick={handlerAddToCart} >Añadir al carrito</Button>
+                    </Col>
+                </Row>
+            </Container>
         </>
     )
 }
