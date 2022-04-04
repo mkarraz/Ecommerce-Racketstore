@@ -2,15 +2,18 @@ import React from 'react';
 import App from './App';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter } from 'react-router-dom';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import './css/myStyles.css';
 import './index.css';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

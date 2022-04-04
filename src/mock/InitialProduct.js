@@ -1,7 +1,7 @@
 export const InitialProduct = [
     {
         name: "HEAD YOUTEK GRAPHENE SPEED PRO TENNIS",
-        price: 24999,
+        price: 37759,
         oldPrice: 47199,
         discount: 20,
         stock: 4,

@@ -1,6 +1,7 @@
 export const InitialProducts = [
     {
         name: "BABOLAT PURE DRIVE 110 2021 TENNIS RACQUET",
+        brand: "babolat",
         price: 50999,
         oldPrice: 38249,
         discount: 25,
@@ -13,7 +14,8 @@ export const InitialProducts = [
     },
     {
         name: "HEAD YOUTEK GRAPHENE SPEED PRO TENNIS",
-        price: 24999,
+        brand: "head",
+        price: 37759,
         oldPrice: 47199,
         discount: 20,
         stock: 4,
@@ -28,6 +30,7 @@ export const InitialProducts = [
     },
     {
         name: "WILSON PRO STAFF PRECISION 100",
+        brand: "wilson",
         price: 29999,
         oldPrice: 26999,
         discount: 10,

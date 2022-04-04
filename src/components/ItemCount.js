@@ -33,14 +33,14 @@ const ItemCount = ({stock, onAdd}) => {
                     <Col xs={6}>
                         <Row>
                             <div className='d-flex justify-content-evenly text-magenta'>
-                                <Button variant='outline-dark' onClick={removeItem}>-</Button>
+                                <Button variant='outline-dark qtyBtnSize' onClick={removeItem}>-</Button>
                                 <div className="itemQty">{itemCounter}</div>
-                                <Button variant="outline-dark" onClick={addItem}>+</Button>
+                                <Button variant="outline-dark qtyBtnSize" onClick={addItem}>+</Button>
                             </div>
                         </Row>
                     </Col>   
                     <Col xs={6}>
-                        <Button className="addToCartBtn" onClick={handlerAddToCart} >Añadir al carrito</Button>
+                        <Button className="addToCartBtn" onClick={handlerAddToCart} >ADD TO CART</Button>
                     </Col>
                 </Row>
             </Container>

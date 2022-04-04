@@ -2,6 +2,7 @@ import React from "react"
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button'
 import ViewProductWidget from './ViewProductWidget';
+/* import { Link } from "react-router-dom"; */
 /* import ItemCount from "./itemCount"; */
 
 

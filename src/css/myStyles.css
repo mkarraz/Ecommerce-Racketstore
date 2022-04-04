@@ -40,6 +40,14 @@
     text-align: center;
     margin-top: 10px;
 }
+/* NAVBAR */
+
+.welcome{
+    margin: 0;
+    color: black;
+    font-size: large;
+    font-weight: bold
+}
 /* CARD */
 .itemCard:hover{
     transform: translatey(-10px) !important;
@@ -87,6 +95,9 @@
 .qtyBtn:active{
     color: #1aca1a;
     background-color: white;
+}
+.qtyBtnSize{
+    padding: 7px;
 }
 .itemQty{
     border: none;
