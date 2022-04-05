@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
-import ItemDetailList from './components/ItemDetailList';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import {Routes, Route} from 'react-router-dom'
 import Cart from './components/Cart'
 import Error from './components/Error'
@@ -9,24 +9,24 @@ import './App.css';
 
 function App() {
 
-    const greeting = "Encuentra todo lo que buscas relacionado al Tenis!"
+    const greeting = "Encuentra TODO lo relacionado al Tenis!"
     const userName = "Juan Carlos"
     
     return (
       <>
-        <NavBar />
+        <NavBar userName={userName}/>
         <Routes>
           <Route
             path='/'
-            element={<ItemListContainer userName={userName} greeting={greeting} />}
+            element={<ItemListContainer greeting={greeting} />}
           />
           <Route
             path='/brands/:brandName'
-            element={<ItemListContainer userName={userName} greeting={greeting} />}
+            element={<ItemListContainer greeting={greeting} />}
           />
           <Route
-            path='/product/:id'
-            element={<ItemDetailList />}
+            path='/item/:id'
+            element={<ItemDetailContainer />}
           />
           <Route
             path='/cart'

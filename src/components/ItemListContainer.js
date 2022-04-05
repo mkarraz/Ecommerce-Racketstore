@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import { InitialProducts } from "../mock/InitialProducts";
 import { useParams } from "react-router-dom";
 import Loader from './Loader'
+import { Container, Row, Col} from 'react-bootstrap'
 
 
 const promesa = new Promise((res, rej) => {
@@ -12,7 +13,7 @@ const promesa = new Promise((res, rej) => {
 });
 
 
-const ItemListContainer = ({ userName, greeting }) => {
+const ItemListContainer = ({ greeting }) => {
 
     const apiUrl = "https://mocki.io/v1/765ea156-bdb7-47a5-ad9d-96b0cafcff1e"
     const [products, setProducts] = useState([])
@@ -49,21 +50,23 @@ const ItemListContainer = ({ userName, greeting }) => {
 
     return (
         <>
-            <div>
-                <p>Bienvenido, {userName}!</p>
-                <p>{greeting}!</p>
-                {
-                    loading ? (
-                        <Loader />
-                    ) : (
-                        error ? (
-                            <h1>Lo sentimos, ocurrió un error...</h1>
-                        ) : (
-                            <ItemList products={products} />
-                        )  
-                    )
-                }
-            </div>
+                    <div className="welcomeDiv">
+                        <p className="display-1 welcome">{greeting}</p>
+                    </div>
+
+                    <div>
+                        {
+                            loading ? (
+                                <Loader />
+                            ) : (
+                                error ? (
+                                    <h1>Lo sentimos, ocurrió un error...</h1>
+                                ) : (
+                                    <ItemList products={products} />
+                                )
+                            )
+                        }
+                    </div>
         </>
     )
 }

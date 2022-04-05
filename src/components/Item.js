@@ -2,10 +2,7 @@ import React from "react"
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button'
 import ViewProductWidget from './ViewProductWidget';
-/* import { Link } from "react-router-dom"; */
-/* import ItemCount from "./itemCount"; */
-
-
+import { Link } from "react-router-dom";
 
 const Item = ({item}) => {
 
@@ -20,7 +17,8 @@ const Item = ({item}) => {
                     </Card.Text>
                     <div className="itemBtns">
                         <div className="itemAddToCart">
-                            <Button className="viewDetailsBtn" >View Details <ViewProductWidget/></Button>
+                        <Link key={item.id} to={`/item/${item.id}`}><Button className="viewDetailsBtn" >View Details <ViewProductWidget/></Button></Link>
+                        {/* <Button className="addToCartBtn" >View Details <ViewProductWidget/></Button> */}
                         </div>
                     </div>
                 </Card.Body>

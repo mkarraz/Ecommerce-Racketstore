@@ -1,12 +1,13 @@
 import React from "react";
 import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap'
-import { NavLink, Link } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import logo from '../img/logo.png';
 import CartWidget from './CartWidget';
+import { BiUserCircle } from "react-icons/bi";
 
 
 
-const NavBar = () => {
+const NavBar = ({userName}) => {
 
     const brands = [
         { name: "Babolat", route: "brands/babolat", id: 1 },
@@ -33,6 +34,8 @@ const NavBar = () => {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
+                                <Nav.Link className="userIcon" as={NavLink} to="/"><BiUserCircle /> {userName}</Nav.Link>
+                                <NavDropdown.Divider />
                                 <Nav.Link as={NavLink} to="/">Home</Nav.Link>
                                 <NavDropdown title="Brands" id="basic-nav-dropdown">
                                     {brands.map((element) => {

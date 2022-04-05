@@ -9,6 +9,10 @@
 .prueba2{
     background-color: blue;
 }
+.averga{
+    padding: 0%;
+    margin: 0%;
+}
 /* Estilos Generales */
 .margTop{
     margin-top: 15px;
@@ -41,14 +45,22 @@
     margin-top: 10px;
 }
 /* NAVBAR */
-
+.userIcon{
+    margin-right: 4px;
+}
+.welcomeDiv{
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-around;
+  padding: 2%;
+}
 .welcome{
-    margin: 0;
-    color: black;
-    font-size: large;
-    font-weight: bold
+    font-size: 3rem;
 }
 /* CARD */
+.itemCard{
+    margin-top: 15px;
+}
 .itemCard:hover{
     transform: translatey(-10px) !important;
 }
@@ -65,7 +77,10 @@
 }
 /* CARD TITLE */
 .titleCard {
+    padding-top: 10px;
     color: black;
+    border-top: 2px solid rgb(207, 207, 207);
+
 }
 /* ITEM PRICE */
 .itemPrice{
@@ -107,48 +122,49 @@
     padding-top: 5px;
 }
 /* BOTON VIEW DETAILS */
-
-.viewDetailsBtn{
+.viewDetailsBtn, .viewDetailsBtn:focus, .viewDetailsBtn:active{
     color: white;
     background-color: rgb(0, 0, 0);
     width: 100%;
     margin-top: 8px;
     font-weight: bolder;
-}
-.viewDetailsBtn:focus{
-    color: white;
-    background-color: rgb(0, 0, 0);
-    width: 100%;
+    border: none;
+    box-shadow: none;
 }
 .viewDetailsBtn:hover{
     background-color: rgb(66, 65, 65);
     color: white;
+    border: none;
+    box-shadow: none;
 }
-.viewDetailsBtn:active{
+.viewDetailsBtn:active:focus{
     color: black;
     background-color: white;
     width: 100%;
+    border: none;
+    box-shadow: 0 0 0 0.25rem rgb(66, 65, 65);
 }
 /* BOTON ADD TO CART */
-.addToCartBtn{
+.addToCartBtn, .addToCartBtn:focus, .addToCartBtn:active{
     color: white;
     background-color: rgb(0, 0, 0);
     width: 100%;
     font-weight: bolder;
-}
-.addToCartBtn:focus{
-    color: white;
-    background-color: rgb(0, 0, 0);
-    width: 100%;
+    border: none;
+    box-shadow: none;
 }
 .addToCartBtn:hover{
     background-color: rgb(66, 65, 65);
     color: white;
+    border: none;
+    box-shadow: none;
 }
-.addToCartBtn:active{
+.addToCartBtn:active:focus{
     color: black;
     background-color: white;
     width: 100%;
+    border: none;
+    box-shadow: 0 0 0 0.25rem rgb(66, 65, 65);
 }
 /* Render de productos */
 .itemRender{
@@ -156,22 +172,11 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 2%;
+  padding: 0 2% 2% 2%
 }
 /* Render Item Detail */
-.divItemDet{
+.itemDetDiv{
     padding: 3%;
-}
-.ItemDetImg{
-    width: 100%;
-    background-color: blue;
-}
-.divItemDetImg{
-    border: 0.5px solid rgb(207, 207, 207);
-    height: 0.1vh;
-}
-.divItemDetCart{
-    background-color: red;
 }
 .ItemDetRow1{
     padding-left: 25px;
@@ -215,13 +220,15 @@
     border-top: 0.5px solid rgb(207, 207, 207);
     border-bottom: 0.5px solid rgb(207, 207, 207);
 }
-
 .itemDescDiv{
     padding-top: 15px;
 }
 .itemDetDesc1{
     padding-top: 15px;
     font-weight: bold;
+}
+.itemDetDesc2{
+    text-align: justify;
 }
 .ItemDetRow4{
     padding-left: 25px;

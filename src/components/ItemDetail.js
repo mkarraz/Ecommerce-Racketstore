@@ -10,7 +10,7 @@ const ItemDetail = ({itemDetail}) => {
 
     return (
 
-        <Container fluid="sm">
+        <Container fluid="sm" className="itemDetDiv">
             <Row>
                 <Col className="fullBorder d-flex align-items-center" md={6} sm={12}>
                     <img src={itemDetail.img} className="img-fluid" alt="" />
@@ -47,10 +47,10 @@ const ItemDetail = ({itemDetail}) => {
                             <p className="smallNote margTop">Take advantage of the momentary <span className="greenColor">free shipping</span>!</p>
                         </Col>
                     </Row>
-                    <Row className="ItemDetRow4">
+                    <Row className="    ">
                         <Col xs={12} className="itemDescDiv">
                             <p className="itemDetDesc1">{itemDetail.description1}</p>
-                            <p>{itemDetail.description2}</p>
+                            <p className="itemDetDesc2">{itemDetail.description2}</p>
                         </Col>
                     </Row>
                 </Col>
