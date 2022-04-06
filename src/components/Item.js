@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import ViewProductWidget from './ViewProductWidget';
 import { Link } from "react-router-dom";
 
-const Item = ({item}) => {
+const Item = ({ item }) => {
 
     return (
         <>
@@ -17,15 +17,13 @@ const Item = ({item}) => {
                     </Card.Text>
                     <div className="itemBtns">
                         <div className="itemAddToCart">
-                        <Link key={item.id} to={`/item/${item.id}`}><Button className="viewDetailsBtn" >View Details <ViewProductWidget/></Button></Link>
-                        {/* <Button className="addToCartBtn" >View Details <ViewProductWidget/></Button> */}
+                            <Link key={item.id} to={`/item/${item.id}`}><Button className="viewDetailsBtn" >View Details <ViewProductWidget /></Button></Link>
                         </div>
                     </div>
                 </Card.Body>
             </Card>
         </>
     )
-
 }
 
 export default Item

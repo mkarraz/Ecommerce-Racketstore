@@ -1,10 +1,10 @@
 import React from "react"
 import { useState } from 'react'
 import Button from 'react-bootstrap/Button'
-import { Container, Row, Col} from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 
-const ItemCount = ({stock, onAdd}) => {
+const ItemCount = ({ stock, onAdd }) => {
 
     const [itemCounter, setItemCounter] = useState(1)
 
@@ -38,7 +38,7 @@ const ItemCount = ({stock, onAdd}) => {
                                 <Button variant="outline-dark qtyBtnSize" onClick={addItem}>+</Button>
                             </div>
                         </Row>
-                    </Col>   
+                    </Col>
                     <Col xs={6}>
                         <Button className="addToCartBtn" onClick={handlerAddToCart} >ADD TO CART</Button>
                     </Col>

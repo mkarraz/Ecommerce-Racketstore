@@ -1,12 +1,12 @@
 import React from "react"
-import { Container, Row, Col} from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import ItemCount from "./ItemCount"
 
 const onAdd = (itemCounter) => {
     console.log(`El usuario seleccionó ${itemCounter} items.`)
 }
 
-const ItemDetail = ({itemDetail}) => {
+const ItemDetail = ({ itemDetail }) => {
 
     return (
 
@@ -42,12 +42,12 @@ const ItemDetail = ({itemDetail}) => {
                     <Row className="ItemDetRow3">
                         <Col xs={10} className="itemCountDiv">
                             <Row >
-                                <Col xs={12}><ItemCount stock={itemDetail.stock} onAdd={onAdd}/></Col>
+                                <Col xs={12}><ItemCount stock={itemDetail.stock} onAdd={onAdd} /></Col>
                             </Row>
                             <p className="smallNote margTop">Take advantage of the momentary <span className="greenColor">free shipping</span>!</p>
                         </Col>
                     </Row>
-                    <Row className="    ">
+                    <Row>
                         <Col xs={12} className="itemDescDiv">
                             <p className="itemDetDesc1">{itemDetail.description1}</p>
                             <p className="itemDetDesc2">{itemDetail.description2}</p>
@@ -56,9 +56,7 @@ const ItemDetail = ({itemDetail}) => {
                 </Col>
             </Row>
         </Container>
-
     )
-
 }
 
 export default ItemDetail

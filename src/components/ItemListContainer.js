@@ -1,17 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import { InitialProducts } from "../mock/InitialProducts";
 import { useParams } from "react-router-dom";
 import Loader from './Loader'
-import { Container, Row, Col} from 'react-bootstrap'
-
-
-const promesa = new Promise((res, rej) => {
-    setTimeout(() => {
-      res(InitialProducts);
-    }, 2000);
-});
-
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -47,26 +37,25 @@ const ItemListContainer = ({ greeting }) => {
         getItems()
     }, [brandName])
 
-
     return (
         <>
-                    <div className="welcomeDiv">
-                        <p className="display-1 welcome">{greeting}</p>
-                    </div>
+            <div className="welcomeDiv">
+                <p className="display-1 welcome">{greeting}</p>
+            </div>
 
-                    <div>
-                        {
-                            loading ? (
-                                <Loader />
-                            ) : (
-                                error ? (
-                                    <h1>Lo sentimos, ocurrió un error...</h1>
-                                ) : (
-                                    <ItemList products={products} />
-                                )
-                            )
-                        }
-                    </div>
+            <div>
+                {
+                    loading ? (
+                        <Loader />
+                    ) : (
+                        error ? (
+                            <h1>Lo sentimos, ocurrió un error...</h1>
+                        ) : (
+                            <ItemList products={products} />
+                        )
+                    )
+                }
+            </div>
         </>
     )
 }
