@@ -1,12 +1,13 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap'
 import ItemCount from "./ItemCount"
+import { useState } from 'react'
 
-const onAdd = (itemCounter) => {
-    console.log(`El usuario seleccionó ${itemCounter} items.`)
-}
+
 
 const ItemDetail = ({ itemDetail }) => {
+
+    const [purchase, setPurchase] = useState({})
 
     return (
 
@@ -42,7 +43,7 @@ const ItemDetail = ({ itemDetail }) => {
                     <Row className="ItemDetRow3">
                         <Col xs={10} className="itemCountDiv">
                             <Row >
-                                <Col xs={12}><ItemCount stock={itemDetail.stock} onAdd={onAdd} /></Col>
+                                <Col xs={12}><ItemCount purchase={purchase} setPurchase={setPurchase} itemDetail={itemDetail} /></Col>
                             </Row>
                             <p className="smallNote margTop">Take advantage of the momentary <span className="greenColor">free shipping</span>!</p>
                         </Col>

@@ -2,14 +2,15 @@ import React from "react"
 import { useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import { Container, Row, Col } from 'react-bootstrap'
+import { Link } from "react-router-dom";
 
 
-const ItemCount = ({ stock, onAdd }) => {
+const ItemCount = ({ purchase, setPurchase, itemDetail }) => {
 
     const [itemCounter, setItemCounter] = useState(1)
 
     const addItem = () => {
-        if (itemCounter < stock) {
+        if (itemCounter < itemDetail.stock) {
             setItemCounter(itemCounter + 1)
         }
     }
@@ -22,9 +23,12 @@ const ItemCount = ({ stock, onAdd }) => {
 
     const handlerAddToCart = () => {
         if (itemCounter > 0) {
-            onAdd(itemCounter)
+            setPurchase({nombre : itemDetail.name, cantidad : itemCounter})
+            setItemCounter(1)
         }
     }
+
+    console.log(purchase)
 
     return (
         <>
@@ -40,7 +44,13 @@ const ItemCount = ({ stock, onAdd }) => {
                         </Row>
                     </Col>
                     <Col xs={6}>
-                        <Button className="addToCartBtn" onClick={handlerAddToCart} >ADD TO CART</Button>
+                        {
+                            Object.keys(purchase) != 0
+                                ?
+                                <Link to={`/cart`}><Button className="addToCartBtn" >CHECKOUT</Button></Link>
+                                :
+                                <Button className="addToCartBtn" onClick={handlerAddToCart} >ADD TO CART</Button>
+                        }
                     </Col>
                 </Row>
             </Container>
