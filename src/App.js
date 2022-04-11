@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom'
 import Cart from './components/Cart'
 import Error from './components/Error'
 import './App.css';
+import CustomProvider from './Context/CartContext'
 
 function App() {
 
@@ -14,29 +15,31 @@ function App() {
 
   return (
     <>
-      <NavBar userName={userName} />
-      <Routes>
-        <Route
-          path='/'
-          element={<ItemListContainer greeting={greeting} />}
-        />
-        <Route
-          path='/brands/:brandName'
-          element={<ItemListContainer greeting={greeting} />}
-        />
-        <Route
-          path='/item/:id'
-          element={<ItemDetailContainer />}
-        />
-        <Route
-          path='/cart'
-          element={<Cart />}
-        />
-        <Route
-          path='*'
-          element={<Error />}
-        />
-      </Routes>
+      <CustomProvider>
+        <NavBar userName={userName} />
+        <Routes>
+          <Route
+            path='/'
+            element={<ItemListContainer greeting={greeting} />}
+          />
+          <Route
+            path='/brands/:brandName'
+            element={<ItemListContainer greeting={greeting} />}
+          />
+          <Route
+            path='/item/:id'
+            element={<ItemDetailContainer />}
+          />
+          <Route
+            path='/cart'
+            element={<Cart />}
+          />
+          <Route
+            path='*'
+            element={<Error />}
+          />
+        </Routes>
+      </CustomProvider>
     </>
   );
 }
