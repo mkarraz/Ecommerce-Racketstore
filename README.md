@@ -2,6 +2,12 @@ Proyecto Ecommerce Raquetas de tenis - React js - CoderHouse - Matias Karraz.-
 
 Introducción: Ecommerce basado en productos de Tenis. Se renderizan las raquetas de marcas Babolat, Head y Wilson en tarjetas. Se instalaron dependencias de estilos "bootstrap y md5".
 
+Como RECURSOS en el proyecto, se utilizan:
+*RouterDom --> para el routing (en conjunto con useParams para acceder a los parametros de las rutas).
+*useEffect --> para realizar las promises (en conjunto con fetch).
+*useState --> para utilizar variables de estado.
+*Context
+
 
 # Getting Started with Create React App
 

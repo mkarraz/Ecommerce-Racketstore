@@ -20,13 +20,10 @@ const ItemDetail = ({ itemDetail }) => {
         setItemQty(itemCounter)
     }
 
-    const handlerCheckOut = () => {
+    const checkOutHandler = () => {
         addItem({ itemDetail }, itemQty)
     }
-    const pruebaBorrado = () => {
-        removeItem(id)
-    }
-
+    
     return (
 
         <Container fluid="sm" className="itemDetDiv">
@@ -63,8 +60,7 @@ const ItemDetail = ({ itemDetail }) => {
                             <Row >
                                 <Col xs={12}>
                                     {!addToCartClicked ? (<ItemCount stock={stock} onAdd={onAdd} />)
-                                        : (<Link to={`/cart`}><Button className="addToCartBtn" onClick={handlerCheckOut}>CHECKOUT</Button></Link>)}
-                                    <Link to={`/cart`}><Button className="addToCartBtn" onClick={pruebaBorrado}>borrar</Button></Link>
+                                        : (<Link to={`/cart`}><Button className="addToCartBtn" onClick={checkOutHandler}>CHECKOUT</Button></Link>)}
                                 </Col>
                             </Row>
                             <p className="smallNote margTop">Take advantage of the momentary <span className="greenColor">free shipping</span>!</p>

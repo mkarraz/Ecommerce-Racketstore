@@ -27,6 +27,7 @@ const CustomProvider = ({ children }) => {
                 qty: itemQty
             }
             setCartItems([...cartItems, newCartItem])
+            setTotalCartQty(totalCartQty + itemQty)
         }
     }
 
@@ -45,10 +46,14 @@ const CustomProvider = ({ children }) => {
         return cartItems.some((element) => element.id === id)
     }
 
+    const cartTotalCost = () => {
+        return cartItems.reduce((acumulado, item) => acumulado = acumulado + (item.price * item.qty), 0)
+    }
+
     console.log(cartItems)
 
     return (
-        <Provider value={{ cartItems, addItem, removeItem, clear }}>
+        <Provider value={{ cartItems, totalCartQty, addItem, removeItem, clear, cartTotalCost }}>
             {children}
         </Provider>
     )

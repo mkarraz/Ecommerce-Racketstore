@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useContext } from "react"
 import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap'
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from '../img/logo.png';
 import CartWidget from './CartWidget';
 import { BiUserCircle } from "react-icons/bi";
+import Badge from 'react-bootstrap/Badge'
+import { context } from "../Context/CartContext";
 
+const NavBar = ({ userName }) => {
 
-
-const NavBar = ({userName}) => {
+    const { totalCartQty } = useContext(context)
 
     const brands = [
         { name: "Babolat", route: "brands/babolat", id: 1 },
         { name: "Head", route: "brands/head", id: 2 },
         { name: "Wilson", route: "brands/wilson", id: 3 }
     ]
+
+    console.log(totalCartQty)
 
     return (
         <>
@@ -47,7 +51,11 @@ const NavBar = ({userName}) => {
                                     <NavDropdown.Item as={NavLink} to="/">Accessories</NavDropdown.Item>
                                 </NavDropdown>
                                 <NavDropdown.Divider />
-                                <Nav.Link as={NavLink} to="/cart"><CartWidget /></Nav.Link>
+                                <Nav.Link as={NavLink} to="/cart">
+                                    <CartWidget />
+                                    {totalCartQty !== 0 ? (<Badge pill bg="danger">{totalCartQty}</Badge>)
+                                        : null}
+                                </Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </div>
