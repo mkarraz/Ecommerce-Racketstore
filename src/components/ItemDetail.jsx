@@ -21,7 +21,7 @@ const ItemDetail = ({ itemDetail }) => {
     }
 
     const checkOutHandler = () => {
-        addItem({ itemDetail }, itemQty)
+        addItem(itemDetail, itemQty)
     }
     
     return (
