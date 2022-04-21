@@ -69,9 +69,6 @@ const CustomProvider = ({ children }) => {
           setTotalCartQty(0)
       }
     }, [cartItems])
-    
-
-    console.log(cartItems)
 
     return (
         <Provider value={{ cartItems, totalCartQty, addItem, removeItem, clear, cartTotalCost }}>

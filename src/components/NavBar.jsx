@@ -17,8 +17,6 @@ const NavBar = ({ userName }) => {
         { name: "Wilson", route: "brands/wilson", id: 3 }
     ]
 
-    console.log(totalCartQty)
-
     return (
         <>
             <Navbar bg="light" expand="lg">

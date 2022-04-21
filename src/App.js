@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
-import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemListContainer from './Containers/ItemList/ItemListContainer'
+import ItemDetailContainer from './Containers/ItemDetail/ItemDetailContainer';
 import { Routes, Route } from 'react-router-dom'
 import Cart from './components/Cart'
 import Error from './components/Error'
@@ -23,7 +23,7 @@ function App() {
             element={<ItemListContainer greeting={greeting} />}
           />
           <Route
-            path='/brands/:brandName'
+            path='/brands/:brand'
             element={<ItemListContainer greeting={greeting} />}
           />
           <Route

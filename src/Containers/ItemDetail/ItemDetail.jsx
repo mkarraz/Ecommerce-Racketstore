@@ -1,19 +1,17 @@
 import React, { useContext } from "react"
 import { Container, Row, Col } from 'react-bootstrap'
-import ItemCount from "./ItemCount"
+import ItemCount from "../../components/ItemCount"
 import { useState } from 'react'
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button'
-import { context } from "../Context/CartContext";
-
-
+import { context } from "../../Context/CartContext";
 
 const ItemDetail = ({ itemDetail }) => {
 
-    const { name, brand, price, oldPrice, discount, stock, id, gripSize, gripSize2, description1, description2, img } = itemDetail
+    const { name, price, oldPrice, discount, stock, gripSize, gripSize2, description1, description2, img } = itemDetail
     const [addToCartClicked, setAddToCartClicked] = useState(false)
     const [itemQty, setItemQty] = useState(0)
-    const { addItem, removeItem } = useContext(context)
+    const { addItem } = useContext(context)
 
     const onAdd = (itemCounter) => {
         setAddToCartClicked(true)
@@ -23,7 +21,7 @@ const ItemDetail = ({ itemDetail }) => {
     const checkOutHandler = () => {
         addItem(itemDetail, itemQty)
     }
-    
+
     return (
 
         <Container fluid="sm" className="itemDetDiv">
