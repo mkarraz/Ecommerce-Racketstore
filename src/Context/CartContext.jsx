@@ -25,9 +25,7 @@ const CustomProvider = ({ children }) => {
             const itemTarget = cartItems.find((element) => element.id === id)
             itemTarget.qty = itemTarget.qty + itemQty //Actualizo la cantidad agregada
             setTotalCartQty(totalCartQty + itemQty)
-            console.log(`Añadiste ${itemTarget.qty} items de ${itemTarget.name} al carrito`)
         } else {
-            console.log(`Añadiste ${itemQty} items de ${name} al carrito`)
             const newCartItem =
             {
                 name: name,
@@ -45,7 +43,6 @@ const CustomProvider = ({ children }) => {
         const updatedCart = cartItems.filter(
             (element) => element.id !== id)
         setCartItems(updatedCart)
-        console.log(`Item Eliminado`)
     }
 
     const clear = () => {

@@ -160,6 +160,7 @@
     font-weight: bolder;
     border: none;
     box-shadow: none;
+
 }
 .addToCartBtn:hover{
     background-color: rgb(66, 65, 65);
@@ -244,10 +245,11 @@
 }
 /* SHOPPING CART */
 .cartDiv{
-    padding: 20px;
+    padding: 60px;
     background-color: #f1f1f1;
     margin-top: 40px;
 }
+
 .itemCartMap{
     background-color: white;
     margin-top: 20px;
@@ -317,4 +319,22 @@
     align-items: center;
     padding-bottom: 10px;
     font-size: 3.5vh;
+}
+/* FORM */
+.formDiv{
+    padding: 20px;
+    margin-top: 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.generalInputs{
+    border: none;
+    padding-left: 10px;
+    font-size: large;
+    padding: 10px;
 }

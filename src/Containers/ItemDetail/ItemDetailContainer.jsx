@@ -21,7 +21,9 @@ const ItemDetailContainer = () => {
                     setProduct({
                         id: result.id, ...result.data()
                     })
-                } 
+                } else {
+                    setError(true) 
+                }
             })
             .catch(error => {
                 setError(true)
@@ -40,7 +42,7 @@ const ItemDetailContainer = () => {
                     <Loader />
                 ) : (
                     error ? (
-                        <h1>Lo sentimos, ocurrió un error...</h1>
+                        <h1>We're sorry, something went wrong...</h1>
                     ) : (
                         <ItemDetail itemDetail={product} />
                     )

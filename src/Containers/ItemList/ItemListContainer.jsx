@@ -16,19 +16,23 @@ const ItemListContainer = ({ greeting }) => {
         //Utilizo la conf de 'db' y apunto a ItemCollection
         const itemsCollection = collection(db, 'ItemCollection')
         const itemsFiltered = query(itemsCollection, where("brand", "==", `${brand}`))
-        
+
         if (brand) {
             getDocs(itemsFiltered)
                 .then((result) => {
                     const docs = result.docs
-                    const list = docs.map(item => {
-                        const id = item.id
-                        const product = {
-                            id, ...item.data()
-                        }
-                        return product
-                    })
-                    setProducts(list)
+                    if (docs.length > 0) {
+                        const list = docs.map(item => {
+                            const id = item.id
+                            const product = {
+                                id, ...item.data()
+                            }
+                            return product
+                        })
+                        setProducts(list)
+                    } else {
+                        setError(true)
+                    }
                 })
                 .catch(error => { 
                     setError(true)
@@ -41,14 +45,18 @@ const ItemListContainer = ({ greeting }) => {
             getDocs(itemsCollection)
                 .then((result) => {
                     const docs = result.docs
-                    const list = docs.map(item => {
-                        const id = item.id
-                        const product = {
-                            id, ...item.data()
-                        }
-                        return product
-                    })
-                    setProducts(list)
+                    if (docs.length > 0) {
+                        const list = docs.map(item => {
+                            const id = item.id
+                            const product = {
+                                id, ...item.data()
+                            }
+                            return product
+                        })
+                        setProducts(list)
+                    } else {
+                        setError(true) 
+                    }  
                 })
                 .catch(error => { 
                     setError(true) 

@@ -51,8 +51,7 @@ const NavBar = ({ userName }) => {
                                 <NavDropdown.Divider />
                                 <Nav.Link as={NavLink} to="/cart">
                                     <CartWidget />
-                                    {totalCartQty !== 0 ? (<Badge pill bg="danger">{totalCartQty}</Badge>)
-                                        : null}
+                                    {totalCartQty !== 0 && (<Badge pill bg="danger">{totalCartQty}</Badge>)}
                                 </Nav.Link>
                             </Nav>
                         </Navbar.Collapse>

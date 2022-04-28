@@ -10,16 +10,11 @@ const ItemDetail = ({ itemDetail }) => {
 
     const { name, price, oldPrice, discount, stock, gripSize, gripSize2, description1, description2, img } = itemDetail
     const [addToCartClicked, setAddToCartClicked] = useState(false)
-    const [itemQty, setItemQty] = useState(0)
     const { addItem } = useContext(context)
 
     const onAdd = (itemCounter) => {
         setAddToCartClicked(true)
-        setItemQty(itemCounter)
-    }
-
-    const checkOutHandler = () => {
-        addItem(itemDetail, itemQty)
+        addItem(itemDetail, itemCounter)
     }
 
     return (
@@ -36,7 +31,7 @@ const ItemDetail = ({ itemDetail }) => {
                         <Row>
                             <Col className="centerAlign boldStyle" xs={5}><span className="actualPrice">${price}</span><span className="oldPrice">{oldPrice}</span></Col>
                             <Col xs={3} className="centerAlign1 boldStyle redColor sidesBorder"><span>{discount}% Off</span></Col>
-                            <Col xs={3} className="centerAlign1 boldStyle greenColor">IN STOCK</Col>
+                            <Col xs={3} className="centerAlign1 boldStyle greenColor">STOCK: {stock}</Col>
                         </Row>
                     </Row>
                     <Row className="ItemDetRow2">
@@ -57,8 +52,11 @@ const ItemDetail = ({ itemDetail }) => {
                         <Col xs={10} className="itemCountDiv">
                             <Row >
                                 <Col xs={12}>
-                                    {!addToCartClicked ? (<ItemCount stock={stock} onAdd={onAdd} />)
-                                        : (<Link to={`/cart`}><Button className="addToCartBtn" onClick={checkOutHandler}>CHECKOUT</Button></Link>)}
+                                    {
+                                    !addToCartClicked ? 
+                                    (<ItemCount stock={stock} onAdd={onAdd} />)
+                                        : (<Link to={`/cart`}><Button className="addToCartBtn">CHECKOUT</Button></Link>)
+                                        }
                                 </Col>
                             </Row>
                             <p className="smallNote margTop">Take advantage of the momentary <span className="greenColor">free shipping</span>!</p>
