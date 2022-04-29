@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap'
 const Footer = () => {
     return (
         <Container className="footer">
-            Todos los derechos reservados
+            All rights reserved
         </Container>
     )
 }
