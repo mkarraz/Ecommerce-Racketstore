@@ -31,7 +31,11 @@ const ItemDetail = ({ itemDetail }) => {
                         <Row>
                             <Col className="centerAlign boldStyle" xs={5}><span className="actualPrice">${price}</span><span className="oldPrice">{oldPrice}</span></Col>
                             <Col xs={3} className="centerAlign1 boldStyle redColor sidesBorder"><span>{discount}% Off</span></Col>
-                            <Col xs={3} className="centerAlign1 boldStyle greenColor">STOCK: {stock}</Col>
+                            {
+                                stock > 0 ?
+                                    (<Col xs={3} className="centerAlign1 boldStyle greenColor"> STOCK: {stock}</Col>) :
+                                    (<Col xs={4} className="centerAlign1 boldStyle redColor"> OUT of stock</Col>)
+                            }
                         </Row>
                     </Row>
                     <Row className="ItemDetRow2">
@@ -53,10 +57,11 @@ const ItemDetail = ({ itemDetail }) => {
                             <Row >
                                 <Col xs={12}>
                                     {
-                                    !addToCartClicked ? 
-                                    (<ItemCount stock={stock} onAdd={onAdd} />)
-                                        : (<Link to={`/cart`}><Button className="addToCartBtn">CHECKOUT</Button></Link>)
-                                        }
+                                        !stock ? (<Link to={`/`}><Button className="addToCartBtn " >View more products!</Button></Link>) :
+                                            (!addToCartClicked ?
+                                                (<ItemCount stock={stock} onAdd={onAdd} />)
+                                                : (<Link to={`/cart`}><Button className="addToCartBtn">CHECKOUT</Button></Link>))
+                                    }
                                 </Col>
                             </Row>
                             <p className="smallNote margTop">Take advantage of the momentary <span className="greenColor">free shipping</span>!</p>

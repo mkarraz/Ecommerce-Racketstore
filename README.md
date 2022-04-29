@@ -1,81 +1,30 @@
-Proyecto Ecommerce Raquetas de tenis - React js - CoderHouse - Matias Karraz.-
+#Ecommerce RACKETSTORE - React js.-
 
-Introducción: Ecommerce basado en productos de Tenis. Se renderizan las raquetas de marcas Babolat, Head y Wilson en tarjetas. Se instalaron dependencias de estilos "bootstrap y md5".
+##Introducción 
 
-Como RECURSOS en el proyecto, se utilizan:
-*RouterDom --> para el routing (en conjunto con useParams para acceder a los parametros de las rutas).
-*useEffect --> para realizar las promises (en conjunto con fetch).
-*useState --> para utilizar variables de estado.
-*Context
+Ecommerce basado en raquetas de Tenis de 3 marcas distintas, "Babolat, Wilson y Head". El esqueleto del proyecto consiste en un componente principal que renderiza todos los productos. O bien, solamente los seleccionados por el usuario. En caso de que éste último se interese en algún producto en particular, podrá visualizar información extra del mismo en el componente ItemDetail.
+Una vez decidido por la compra del mismo, existe otro componente "Cart" el cual renderizará todos los productos añadidos por el usuario y será el repsonsable de dirigir el proceso de compra.
+
+##Recursos del proyecto
+* ```RouterDom```
+Para el routing (en conjunto con useParams para acceder a los parametros de las rutas).
+* ```useEffect``` 
+Para controlar las actualizaciones de los renderizados.
+* ```useState```
+Para utilizar variables de estado.
+* ```Context```
+Como recurso de lectura y escritura para la información relacionada al Cart.
+* ```Sweetalert y React-icons```
+Responsable de llevar a cabo los pop-ups y la inserción de diferentes iconos respectivamente, para proporcionar animación al proyecto.
+* ```Bootstrap y React-bootstrap```
+Dedicados a brindarle estilos al proyecto. Entre ellos la utilización de diferentes modulos, por ej: **Card**, **Button**, etc. Además se utilizó CSS para complementar el diseño.
+* ```Firebase```
+Como base de datos. Responsable tanto de alojar la información relacionada a los productos de la tienda, como asi también, lo referido al comprador del producto y a la compra en sí misma.
+
+![Logo de la empresa](./src/img/logo.png)
+
+> Proyecto desarrollado por **Matias Karraz**.
+[Ir a Github](https://github.com/mkarraz/ecommerce-karraz_matias)
 
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/888fb01a-9de8-4058-915f-cfa43cb4e92a/deploy-status)](https://app.netlify.com/sites/warm-yeot-8affdd/deploys)

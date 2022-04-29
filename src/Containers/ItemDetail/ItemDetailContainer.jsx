@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
                         id: result.id, ...result.data()
                     })
                 } else {
-                    setError(true) 
+                    setError(true)
                 }
             })
             .catch(error => {
@@ -32,7 +32,7 @@ const ItemDetailContainer = () => {
             .finally(() => {
                 setLoading(false)
             })
-            
+
     }, [id])
 
     return (

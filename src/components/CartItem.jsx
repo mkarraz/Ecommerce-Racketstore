@@ -19,7 +19,9 @@ const CartItem = ({ cartItem, removeItem }) => {
                 <Row className='cartItemTitle'>{qty}x {name}</Row>
                 <Row className='greenColor'>
                     <Col lg={6} md={6} sm={6} className="cartSubItemTitle">Free Shipping</Col>
-                    <Col lg={6} md={6} sm={6} className="cartSubItemTitle"><Button variant="outline-primary" onClick={removeHandler}>Remove</Button></Col>
+                    <Col lg={6} md={6} sm={6} className="cartSubItemTitle">
+                        <Button variant="outline-primary" onClick={removeHandler}>Remove</Button>
+                    </Col>
                 </Row>
             </Col>
             <Col className="priceCartDiv" lg={3}>

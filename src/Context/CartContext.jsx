@@ -11,19 +11,19 @@ const CustomProvider = ({ children }) => {
     const addItem = (itemDetail, itemQty) => {
 
         const newItem =
-            {
-                name: itemDetail.name,
-                price: itemDetail.price,
-                id: itemDetail.id,
-                img: itemDetail.img,
-                qty: itemQty
-            }
-        
-        const {name, price, id, img } = newItem
+        {
+            name: itemDetail.name,
+            price: itemDetail.price,
+            id: itemDetail.id,
+            img: itemDetail.img,
+            qty: itemQty
+        }
+
+        const { name, price, id, img } = newItem
 
         if (isInCart(id)) {
             const itemTarget = cartItems.find((element) => element.id === id)
-            itemTarget.qty = itemTarget.qty + itemQty //Actualizo la cantidad agregada
+            itemTarget.qty = itemTarget.qty + itemQty
             setTotalCartQty(totalCartQty + itemQty)
         } else {
             const newCartItem =
@@ -58,13 +58,13 @@ const CustomProvider = ({ children }) => {
     }
 
     useEffect(() => {
-      if (cartItems.length > 0){
-          let cantidad = 0
-          cartItems.forEach(item => cantidad = cantidad + item.qty)
-          setTotalCartQty(cantidad)
-      } else {
-          setTotalCartQty(0)
-      }
+        if (cartItems.length > 0) {
+            let cantidad = 0
+            cartItems.forEach(item => cantidad = cantidad + item.qty)
+            setTotalCartQty(cantidad)
+        } else {
+            setTotalCartQty(0)
+        }
     }, [cartItems])
 
     return (

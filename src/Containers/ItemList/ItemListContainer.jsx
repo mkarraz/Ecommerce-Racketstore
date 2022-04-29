@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 import { getDocs, collection, query, where } from 'firebase/firestore'
-import ItemList from "./ItemList";
-import { useParams } from "react-router-dom";
+import ItemList from "./ItemList"
+import { useParams } from "react-router-dom"
 import Loader from '../../components/Loader'
 import { db } from '../../firebase/firebase'
 
@@ -13,7 +13,6 @@ const ItemListContainer = ({ greeting }) => {
     const { brand } = useParams()
 
     useEffect(() => {
-        //Utilizo la conf de 'db' y apunto a ItemCollection
         const itemsCollection = collection(db, 'ItemCollection')
         const itemsFiltered = query(itemsCollection, where("brand", "==", `${brand}`))
 
@@ -34,7 +33,7 @@ const ItemListContainer = ({ greeting }) => {
                         setError(true)
                     }
                 })
-                .catch(error => { 
+                .catch(error => {
                     setError(true)
                     console.log(`Error: ${error}`)
                 })
@@ -55,11 +54,11 @@ const ItemListContainer = ({ greeting }) => {
                         })
                         setProducts(list)
                     } else {
-                        setError(true) 
-                    }  
+                        setError(true)
+                    }
                 })
-                .catch(error => { 
-                    setError(true) 
+                .catch(error => {
+                    setError(true)
                     console.log(`Error: ${error}`)
                 })
                 .finally(() => {
